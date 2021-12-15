@@ -1,8 +1,12 @@
-<div #siteMeteo>
-  <div #capteur1 class="style1">
-    <!--{{capteur1}}-->
-  </div>
-  <div #capteur2 class="style1 style2">
-    <!--{{capteur2}}-->
-  </div>
+<div class="sidebar">
+  <a (click)="temperatureShow()">show</a>
+  <a (click)="temperatureHide()">hide</a>
+  <a href="#contact">bouton 3</a>
+  <a href="#about">boution 4</a>
+  <a href="">bonsoir</a>
+</div>
+
+<div class="content">
+  main contenant
+  <app-temperature *ngIf="!hidden"></app-temperature>
 </div>
