@@ -11,7 +11,7 @@ import { RecordsService } from './../services/records.service';
 export class HomeComponent implements OnInit {
   records: Record[] = [];
   temp_multi: any;
-  temp_view: [number, number] = [window.screenX - 2000, 400];
+  temp_view: [number, number] = [900, 400];
 
   // options
   temp_legend: boolean = true;
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   temp_yAxisLabel: string = 'Temperature (C°)';
 
   hum_multi: any;
-  hum_view: [number, number] = [window.screenX - 2000, 400];
+  hum_view: [number, number] = [900, 400];
 
   // options
   hum_legend: boolean = false;
@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
   constructor(private recordsService: RecordsService) {
     //Object.assign(this, { multi });
   }
-  
+
   ngOnInit(): void {
       this.getRecords(500, 0);
       setInterval(() => {

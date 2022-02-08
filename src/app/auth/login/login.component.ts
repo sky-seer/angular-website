@@ -23,12 +23,19 @@ export class LoginComponent {
   login() {
     this.message = 'Trying to log in ...';
 
-    this.authService.login().subscribe(() => {
+    if (!this.email || !this.password) {
+      this.message = 'Please enter email and password';
+      return;
+    }
+
+    this.authService.login(this.email, this.password).subscribe(() => {
       this.message = this.getMessage();
       if (this.authService.isLoggedIn) {
         const redirectUrl = '/dashboard';
 
         this.router.navigate([redirectUrl]);
+      } else {
+        this.message = 'Login failed';
       }
     })
   }
