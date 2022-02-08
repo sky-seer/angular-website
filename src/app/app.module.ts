@@ -1,33 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Module Route
 import { AppRoutingModule } from './app-routing.module';
+
+// Components
 import { AppComponent } from './app.component';
-import { HumiditeComponent } from './humidite/humidite.component';
-import { TemperatureComponent } from './temperature/temperature.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
-import { AcceuilService } from './acceuil/acceuil.service';
-import { TestuiComponent } from './testui/testui.component';
-//import { HttpClient } from '@angular/common/http';
+
+// Module
+import { AuthModule } from './auth/auth.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+
+// Service
 import { HttpErrorHandler } from './http-error-handler.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HumiditeComponent,
-    TemperatureComponent,
-    AcceuilComponent,
-    TestuiComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    AuthModule,
     AppRoutingModule,
-//    HttpClient,
-    HttpClientModule
+    HttpClientModule,
+    DashboardModule
   ],
   providers: [
-    AcceuilService,
     HttpErrorHandler
   ],
   bootstrap: [AppComponent]

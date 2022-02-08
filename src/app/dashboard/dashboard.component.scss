@@ -1,0 +1,50 @@
+:host {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  width: 100%;
+  
+  .sksNavbar {
+    height: 100%;
+    background-color: #272832;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  
+    .sksBrand {
+      margin-bottom: 5rem;
+    }
+    nav {
+      ul {
+        list-style: none;
+    
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          margin-bottom: 20px;
+          display: flex;
+          padding: 11px 25px;
+          text-align: center;
+    
+          &.actif {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+          }
+    
+          span {
+            margin-right: 13px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,37 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [ slideInAnimation ]
 })
 export class AppComponent {
-  title = 'SkySeer';
-  hide = true
-  app = 0
-  siteTheme = 'light'
-
-  showthing () {
-    this.hide = false
-  }
-
-  hidething () {
-    this.hide = true
-  }
-
-  acceuil () {
-    this.app = 0
-  }
-
-  temperature () {
-    this.app = 1
-  }
-
-  humidite () {
-    this.app = 2
-  }
-
-  testui () {
-    this.app = 3
+  getAnimationData(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData?.['animation'];
   }
 }

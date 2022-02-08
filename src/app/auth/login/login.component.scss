@@ -1,0 +1,57 @@
+.loginContainer {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../assets/login_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.loginPlacement {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  background-color: #fff;
+  height: 30rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.loginTitleContaiener {
+  text-align: center;
+  margin: 2rem 0 6rem 0;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .loginBox {
+    width: 100%;
+    height: 100%;
+  }
+}

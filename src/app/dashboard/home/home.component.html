@@ -1,0 +1,40 @@
+<div class="pageContainer">
+  <header>
+    <div class="pageTitle">
+      <h1>Overview</h1>
+    </div>
+  
+    <div class="pageEmail">
+      <p>guemmoudrayane03@gmail.com</p>
+    </div>
+  </header>
+  <div class="chartContainer">
+    <div>
+      <ngx-charts-line-chart
+        [view]="temp_view"
+        [legend]="temp_legend"
+        [showXAxisLabel]="temp_showXAxisLabel"
+        [showYAxisLabel]="temp_showYAxisLabel"
+        [xAxis]="temp_xAxis"
+        [yAxis]="temp_yAxis"
+        [timeline]="temp_timeline"
+        [results]="temp_multi"
+        >
+      </ngx-charts-line-chart>
+    </div>
+  
+    <div>
+      <ngx-charts-line-chart
+        [view]="hum_view"
+        [legend]="hum_legend"
+        [showXAxisLabel]="hum_showXAxisLabel"
+        [showYAxisLabel]="hum_showYAxisLabel"
+        [xAxis]="hum_xAxis"
+        [yAxis]="hum_yAxis"
+        [timeline]="hum_timeline"
+        [results]="hum_multi"
+      >
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+</div>

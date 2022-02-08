@@ -1,0 +1,39 @@
+:host {
+  padding: 2rem 3rem;
+
+  .pageContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5rem 1fr 1fr 1fr;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 2;
+  
+      .pageEmail {
+        font-weight: bold;
+      }
+    }
+
+    .cardGraph {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
